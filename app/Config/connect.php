@@ -11,6 +11,7 @@ class connect {
     private $dbname;
     private $pdo;
 
+    
     public function __construct($host, $username, $password, $dbname) {
         $this->host = $host;
         $this->username = $username;
@@ -32,5 +33,6 @@ class connect {
         }
         return $this->pdo;
     }
+   
 }
-?>
+

@@ -10,8 +10,8 @@ require realpath(path: __DIR__ . '/../') .'/vendor/autoload.php';
           <h2 class="text-gray-800 lg:text-6xl md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[56px]"><span class="text-blue-600">Smart</span> Business with <span class="text-blue-600">Smart</span> People</h2>
           <p class="text-gray-600 mt-6 text-base leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
 
-          <button type='button'
-            class="mt-6 bg-blue-600 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all text-white font-semibold text-sm tracking-wide rounded-md px-6 py-2.5">Get Started</button>
+          <a href="/Store-Management-System/app/views/pages/sginUp.php"><button type='button'
+            class="mt-6 bg-blue-600 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all text-white font-semibold text-sm tracking-wide rounded-md px-6 py-2.5">Get Started</button></a>
 
           <div class="mt-12">
             <div class="grid sm:grid-cols-3 gap-4 items-center">
@@ -32,7 +32,7 @@ require realpath(path: __DIR__ . '/../') .'/vendor/autoload.php';
         </div>
 
         <div class="lg:h-[550px] md:h-[550px] flex items-center relative max-md:before:hidden before:absolute before:bg-[#DEE2E5] before:h-[120%] before:w-[120%] before:right-0 before:z-0">
-          <img src="https://readymadeui.com/team-3.webp" class="rounded-md lg:w-4/5 z-50 relative" alt="Dining Experience" />
+        <iframe src="https://lottie.host/embed/7171ddb7-7576-446e-93d3-63d844432733/niALoRPsHJ.lottie" height="200%" width="100%" class="z-10"></iframe>
         </div>
       </div>
 
@@ -68,6 +68,10 @@ require realpath(path: __DIR__ . '/../') .'/vendor/autoload.php';
         </div>
       </div>
     </div>
+    <?php
+require_once realpath(path: __DIR__ . '/../') .'/app/views/layout/footer.php' ;
 
+    
+    ?>
 
 
