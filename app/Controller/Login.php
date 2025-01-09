@@ -58,8 +58,8 @@ class Login{
         }
         else{
             $_SESSION['user']=["name"=>$result['name'],"email"=>$result['email'],"role"=>$result['role']];
-            // print_r($_SESSION['user']);
-
+            header('location:/Store-Management-System/app/views/pages/client/productList.php');
+            
         }
         
         

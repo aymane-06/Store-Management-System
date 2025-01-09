@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 include '../../layout/header.php';
 include '../../layout/navBarAdmin.php';
 include '../../layout/sideBar.php';
@@ -210,7 +210,7 @@ $_SESSION['old']=null;
                         <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                         <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                     </div>
-                    <input id="dropzone-file" chan name="image" type="file" value="<?= $image?>" class="hidden" accept=".jpg,.jpeg,.png"/>
+                    <input id="dropzone-file" chan name="image" type="file" value="<?= $image?>" class="hidden" accept=".jpg,.jpeg,.png,.webp"/>
                 </label>
             </div> 
             <p class="text-red-600"><?= isset($error['image'])?$error['image']:"" ?></p>

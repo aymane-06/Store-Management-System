@@ -48,7 +48,7 @@ async function getProduct() {
                                 <div class="text-base font-semibold text-gray-900 dark:text-white">${product.name}</div>
                             </td>
                             <td class="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">${product.description}</td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white"><img src="${product.image_url}" /></td>
+                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white"><img width=50 height=50 src="${product.image_url}" /></td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">$${product.price}</td>
                             <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">$${product.quantity}</td>
 

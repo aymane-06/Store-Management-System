@@ -2,6 +2,7 @@
 <?php 
 include_once $_SERVER['DOCUMENT_ROOT'].'/Store-Management-System/app/controller/roleVerification.php';
 global $user;
+
 ?>
 <header class='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
       <div class='flex flex-wrap items-center justify-between gap-5 w-full'>
@@ -48,7 +49,7 @@ global $user;
             </li>
           </ul>
         </div>
-        <?=isset($user['name'])?"<a href='' ><button><i class='fa-solid fa-cart-shopping'></i></button></a><a href='/Store-Management-System/app/controller/logout.php' ><button class='bg-red-600 p-2 rounded'>Logout</button></a>":"<div class='flex max-lg:ml-auto space-x-4'>
+        <?=isset($user['name'])?"<a href='/Store-Management-System/app/views/pages/client/cart.php' ><button><i class='fa-solid fa-cart-shopping'></i></button></a><a href='/Store-Management-System/app/controller/logout.php' ><button class='bg-red-600 p-2 rounded'>Logout</button></a>":"<div class='flex max-lg:ml-auto space-x-4'>
           <a href='/Store-Management-System/app/views/pages/sginIn.php'><button
             class='px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300'>Login</button></a>
          <a href='/Store-Management-System/app/views/pages/sginUp.php'> <button

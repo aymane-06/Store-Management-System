@@ -1,3 +1,10 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'].'/Store-Management-System/app/controller/roleVerification.php';
+global $user;
+if($user['role']!='admin'){
+    header("location:/Store-Management-System/app/views/pages/client/productList.php");
+}
+?>
 <nav class="fixed z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
