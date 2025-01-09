@@ -44,8 +44,8 @@ class Login{
             "email" => $email
         ]);
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        // print_r($result['password']);
-        if(!$stmt->fetchAll(PDO::FETCH_ASSOC)){
+        print_r($result['password']);
+        if($stmt->fetchAll(PDO::FETCH_ASSOC)){
             $_SESSION['error']['email'] = "Email address is not signed UP.";
             header('Location: ../app/views/pages/sginIn.php');
                 exit;

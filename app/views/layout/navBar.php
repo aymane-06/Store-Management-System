@@ -1,3 +1,8 @@
+
+<?php 
+include_once $_SERVER['DOCUMENT_ROOT'].'/Store-Management-System/app/controller/roleVerification.php';
+global $user;
+?>
 <header class='flex shadow-md py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
       <div class='flex flex-wrap items-center justify-between gap-5 w-full'>
         <a href="javascript:void(0)" class="max-sm:hidden"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' /></a>
@@ -23,11 +28,11 @@
               </a>
             </li>
             <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
-              <a href='javascript:void(0)'
+              <a href='/Store-Management-System/public/index.php'
                 class='hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>Home</a>
             </li>
-            <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
-              class='hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Team</a>
+            <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='/Store-Management-System/app/views/pages/client/productList.php'
+              class='hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Product</a>
             </li>
             <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
               class='hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Feature</a>
@@ -43,21 +48,23 @@
             </li>
           </ul>
         </div>
-
-        <div class='flex max-lg:ml-auto space-x-4'>
-          <a href="/Store-Management-System/app/views/pages/sginIn.php"><button
+        <?=isset($user['name'])?"<a href='' ><button><i class='fa-solid fa-cart-shopping'></i></button></a><a href='/Store-Management-System/app/controller/logout.php' ><button class='bg-red-600 p-2 rounded'>Logout</button></a>":"<div class='flex max-lg:ml-auto space-x-4'>
+          <a href='/Store-Management-System/app/views/pages/sginIn.php'><button
             class='px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300'>Login</button></a>
-         <a href="/Store-Management-System/app/views/pages/sginUp.php"> <button
+         <a href='/Store-Management-System/app/views/pages/sginUp.php'> <button
             class='px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'>Sign
             up</button></a>
 
-          <button id="toggleOpen" class='lg:hidden'>
-            <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
+          <button id='toggleOpen' class='lg:hidden'>
+            <svg class='w-7 h-7' fill='#000' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+              <path fill-rule='evenodd'
+                d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
+                clip-rule='evenodd'></path>
             </svg>
-          </button>
+          </button>";
+        
+        ?>
+        
         </div>
       </div>
     </header>

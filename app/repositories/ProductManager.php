@@ -40,4 +40,11 @@ class ProductManager{
         ]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function delete($id){
+        $sql="UPDATE products SET deleted_at=now() WHERE id=:id";
+        $stmt=$this->pdo->prepare($sql);
+        $stmt->execute([
+            "id"=>$id
+        ]);
+    }
 }
